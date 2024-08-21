@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "e3516596-0fac-46a8-bb57-36e619798fd7",
+		"name": "Curls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6101104",
+		"_collection_link": "https://interstellar-crater-862078.postman.co/workspace/My-Workspace~8bc196c6-15b4-452a-8384-ce54db69977e/collection/6101104-e3516596-0fac-46a8-bb57-36e619798fd7?action=share&source=collection_link&creator=6101104"
+	},
+	"item": [
+		{
+			"name": "UserList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "test@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ashu@yahoo.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-GB,en-US;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "Access-Control-Request-Headers",
+						"value": "authorization,content-type,x-request-id"
+					},
+					{
+						"key": "Access-Control-Request-Method",
+						"value": "PUT"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Origin",
+						"value": "http://localhost:5173"
+					},
+					{
+						"key": "Referer",
+						"value": "http://localhost:5173/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvYXV0aGVudGljYXRpb24iLCJpYXQiOjE3MDkzNzIzMjYsImV4cCI6MTcwOTM5MDMyNiwibmJmIjoxNzA5MzcyMzI2LCJqdGkiOiJRcHlRY1ZVSFhZaGV2Zm4yIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJ1c2VyX2lkIjozLCJlbXBfY29kZSI6IklJSUUtMDAzIiwidXNlcm5hbWUiOiJBc2h1MTIzIiwiZW1haWwiOiJhc2h1dG9zaEBnbWFpbC5jb20iLCJjaGFwdGVyX2lkIjoiMSIsImRlc2lnbmF0aW9uX2lkIjpudWxsLCJkZXBhcnRtZW50X2lkIjpudWxsfQ.tn2TyINOq3rp4C2KedoTXJVmYiBS4ycuZkvhmutp1FI"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "x-request-id",
+						"value": "123456789"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/userlist/?first_name=As",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"userlist",
+						""
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "As"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Ashutosh\",\r\n    \"last_name\" : \"Kumar\",\r\n    \"email\": \"ashu@yahoo.com\",\r\n    \"username\": \"ashu01\",\r\n    \"mobile_number\": \"9013925999\",\r\n    \"password\": \"test@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userlogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ashu@yahoo.com\",\r\n    \"password\": \"test@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
